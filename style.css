@@ -1,0 +1,1340 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+:root {
+    --cellwidth: 350px;
+    --cellbgc: #eaeeef;
+    --cellbgc2: #ffbbc9;
+    --cellbgc3: #ceeaf7;
+    --celltc1: #cf6278;
+    --celltc2: #111;
+}
+
+.wrap {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: var(--cellbgc);
+    overflow: hidden;
+}
+
+.bd {
+    border: 1px solid #333;
+}
+
+.banner {
+    width: 100%;
+    height: 80vh;
+    padding: 20px 20px 40px;
+    margin: 0 auto 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.bannerBorder {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    background: url('https://sakulabo.sakura.ad.jp/images/about-background-sp.jpg') center center/cover no-repeat;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: var(--celltc2);
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.logoEng {
+    width: 200px;
+    height: 55px;
+    background-color: #fff;
+    background-image: url('https://sakulabo.sakura.ad.jp/images/sakura-logo.png');
+    background-size: 90%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    transform: translate(-10px, -15px);
+}
+
+.logoJpn {
+    width: 60px;
+    height: 320px;
+    background: url('https://sakulabo.sakura.ad.jp/images/header-title.jpg') center center/ cover no-repeat;
+    position: absolute;
+    z-index: 5;
+    right: 0;
+    transform: translate(15px, -15px);
+}
+
+.nav {
+    position: absolute;
+    left: -1px;
+    bottom: -35px;
+    z-index: 3;
+}
+
+.toc {
+    display: none;
+    flex-direction: column;
+
+}
+
+.bd-2 {
+    border: 2px solid #555;
+}
+
+.toc-top {
+    background: var(--cellbgc2);
+}
+
+.toc-top p {
+    color: #222;
+    font-size: 30px;
+    margin: 20px auto;
+    letter-spacing: 1rem;
+    text-indent: 1rem;
+}
+
+.toc-bottom {
+    min-height: 250px;
+    margin-top: -2px;
+    display: flex;
+}
+
+.toc-bottom>li {
+    background-color: rgb(240, 240, 240);
+    padding: 20px 15px;
+}
+
+.dash-r {
+    border-right: 1px dashed #333;
+}
+
+.toc-bottom>li a {
+    width: 80%;
+    object-fit: contain;
+    writing-mode: vertical-lr;
+    letter-spacing: 3px;
+    color: var(--celltc2);
+}
+
+.toc-bottom>li a:hover {
+    color: var(--cellbgc3);
+    text-shadow: 1px 1px 1px #222;
+}
+
+.nav>img {
+    width: 48px;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    z-index: 3;
+}
+
+.banner-bg {
+    width: 100%;
+    max-width: 1080px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ani {
+    width: 100%;
+    margin: auto;
+    margin-top: 280px;
+    height: 100px;
+    /* position:relative;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%); */
+    display: flex;
+    justify-content: space-between;
+}
+
+.ani>img {
+    object-fit: cover;
+}
+
+.sakura img {
+    width: 80%;
+    object-position: 30% 85%;
+    max-width: 450px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+
+@media (min-width: 576px) {
+    .ani {
+        width: 50%;
+    }
+
+    .nav>img {
+        width: 52px;
+    }
+}
+
+@media (min-width: 768px) {
+    .nav {
+        left: -12px;
+        bottom: -40px;
+    }
+
+    .toc {
+        display: flex;
+    }
+
+    .nav img {
+        display: none;
+    }
+}
+
+.corp-intro {
+    width: 85%;
+    max-width: 700px;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 40px;
+    margin: 0 auto 20px;
+}
+
+.sakura-intro {
+    height: 470px;
+    margin: 0 auto 10px;
+    display: flex;
+    position: relative;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    z-index: 5;
+    right: 12%;
+    bottom: 0;
+    transform: translateY(50%);
+    writing-mode: vertical-rl;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+h3 {
+    width: 50px;
+    height: 200px;
+    font-size: 32px;
+    line-height: 50px;
+    color: #fff;
+    -webkit-text-stroke: 1px #000;
+    background-color: var(--cellbgc2);
+    padding: auto;
+}
+
+.intro2 {
+    margin-top: 50px;
+    margin-right: -1px;
+}
+
+.human {
+    width: 380px;
+    height: 470px;
+    background: url('https://sakulabo.sakura.ad.jp/images/labo-human.png') no-repeat;
+    position: absolute;
+    transform: translateX(-180px);
+}
+
+.text-line {
+    width: 52px;
+    height: 170px;
+    background: url("https://sakulabo.sakura.ad.jp/images/labo-line.png") center center/cover no-repeat;
+    filter: opacity(.4);
+    opacity: .8;
+    position: absolute;
+    left: 130px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.intro-text {
+    position: absolute;
+    left: 180px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.intro-text p {
+    text-align: left;
+    line-height: 2rem;
+}
+
+.hand {
+    width: 150px;
+    /* max-width: 375px; */
+    height: 300px;
+    background: url('https://sakulabo.sakura.ad.jp/images/about-img1.png') center 0/contain no-repeat;
+    position: absolute;
+    right: 0;
+    transform: translate(20%, -30%);
+}
+
+.pink-bg {
+    background-color: var(--cellbgc2);
+    line-height: 2.5rem;
+    padding: 2px;
+    margin: 0 2px;
+}
+
+.idea-slider {
+    width: 100%;
+    margin: 0 auto 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.idea-border {
+    width: 90%;
+    min-width: 250px;
+    padding: 10px 30px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.idea-bd {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.idea-top {
+    flex-grow: 1;
+}
+
+.idea {
+    max-width: 600px;
+    padding: 12px;
+    margin: 0 auto 10px;
+    position: relative;
+}
+
+.idea-border:nth-child(2n+1) .idea {
+    background-color: var(--cellbgc3);
+}
+
+.idea-border:nth-child(2n) .idea {
+    background-color: var(--cellbgc2);
+}
+
+.idea-banner {
+    position: absolute;
+    bottom: -1px;
+    left: -1px;
+}
+
+.idea-banner .num {
+    margin-bottom: -1px;
+}
+
+.idea-ph {
+    height: 200px;
+    margin: 0 auto 10px;
+    position: relative;
+}
+
+.ph1 {
+    background: url('https://sakulabo.sakura.ad.jp/images/sakulabo-thum/image2.png') 15% 20%/ cover no-repeat;
+}
+
+.ph2 {
+    background: url('https://sakulabo.sakura.ad.jp/images/sakulabo-thum/image3.png') 15% 20%/ cover no-repeat;
+}
+
+.ph3 {
+    background: url('https://sakulabo.sakura.ad.jp/images/sakulabo-thum/image4.png') 15% 20%/ cover no-repeat;
+}
+
+.ph4 {
+    background: url('https://www.sakura.ad.jp/information/wp-content/uploads/2022/07/0e8849fa0ded26bc29342030a6b31bc8-768x626.png') 15% 20%/ cover no-repeat;
+}
+
+.white {
+    background-color: #fff;
+}
+
+p {
+    text-align: center;
+}
+
+.num {
+    width: 60px;
+    font-size: 10px;
+    padding: 6px 10px;
+    box-sizing: border-box;
+}
+
+.idea-title {
+    width: 240px;
+    font-size: 18px;
+    padding: 10px 10px;
+}
+
+.btn {
+    width: 180px;
+    height: 68px;
+    /* padding: 3px; */
+    border: 2px solid transparent;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    background: url('https://sakulabo.sakura.ad.jp/images/slide-button.png') center center/ cover no-repeat;
+}
+
+.btn:hover {
+    background-color: #ddd;
+    background-image: url('https://sakulabo.sakura.ad.jp/images/slide-button.png');
+    background-size: calc(100% - 14px);
+    /* padding: 2px; */
+    border: 2px solid #333;
+    border-radius: 5px;
+}
+
+.idea-info {
+    padding: 10px 20px;
+}
+
+.idea-text {
+    text-align: justify;
+    line-height: 2;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 576px) {
+    .idea {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .idea-border {
+        width: 50%;
+        padding: 10px 15px;
+    }
+
+    .intro {
+        transform: translateY(30%);
+    }
+}
+
+@media (min-width: 768px) {
+    .hand {
+        transform: translate(0, 0);
+    }
+
+    .human {
+        transform: translateX(-100px);
+    }
+
+    .text-line {
+        left: 20%;
+    }
+
+    .intro-text {
+        left: 25%;
+    }
+
+    .intro {
+        right: 20%;
+        transform: translateY(25%);
+    }
+}
+
+@media (min-width: 992px) {
+    .idea-border {
+        width: 33.33333%;
+        padding: 10px 20px;
+    }
+
+    .human {
+        transform: translateX(0);
+    }
+
+    .text-line {
+        left: 30%;
+    }
+
+    .intro-text {
+        left: 35%;
+    }
+
+    .intro {
+        right: 30%;
+        transform: translateY(15%);
+    }
+}
+
+@media (min-width: 1200px) {
+    .idea-border {
+        width: 25%;
+        padding: 10px 10px;
+    }
+
+    .human {
+        transform: translateX(30px);
+    }
+}
+
+.ex-intro {
+    width: 90%;
+    height: 130px;
+    margin: 0 auto;
+    padding-top: 40px;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.ex-intro>p {
+    width: 60%;
+    max-width: 400px;
+    padding: 0 30px;
+    line-height: 2;
+    text-align: justify;
+    margin: auto;
+    position: absolute;
+    left: 10%;
+}
+
+.ex-intro .intro {
+    display: none;
+    position: absolute;
+    top: 0;
+}
+
+.ex-intro .intro h3:nth-child(1) {
+    width: 100%;
+    height: 280px;
+}
+
+.ex-intro .intro2 {
+    height: 320px;
+    margin-top: 50px;
+}
+
+.ex {
+    width: 100%;
+    margin: 0 auto 20px;
+    position: relative;
+}
+
+.ex-bg {
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-25%);
+    background: linear-gradient(to top left, #ff008080, #40e0d070 30%, #ff8c0070 60%, #ff008080 70%, #40e0d070 90%, #ff8c0070 100%);
+    background-size: 20px 20px, 20px 20px;
+}
+
+.ex .idea-border {
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.ex-human {
+    width: 120px;
+    margin-left: 60%;
+    /* position: absolute; */
+}
+
+.ex-human>img {
+    width: 100%;
+    object-position: 100%;
+}
+
+.ex .idea {
+    margin-top: -1px;
+    margin-bottom: 20px;
+    max-width: 500px;
+}
+
+.ex .idea:nth-child(2n-1) {
+    background-color: var(--cellbgc3);
+}
+
+.ex .idea-ph {
+    background: url('https://sakulabo.sakura.ad.jp/images/achieve-thum/01.jpg')15% 20%/ cover no-repeat;
+    margin-bottom: 0;
+}
+
+.idea2 .idea-ph {
+    background: url('https://www.sakura.ad.jp/csr/employee/images/pic.png')15% 20%/ cover no-repeat;
+}
+
+.ex .idea-title {
+    width: 190px;
+}
+
+.pink {
+    color: var(--celltc1);
+}
+
+.ex p {
+    text-align: justify;
+}
+
+.ex-bottom {
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.ex .idea-info {
+    width: 50%;
+    height: 100%;
+    /* min-height: 181px; */
+    padding: 20px 20px;
+    margin-top: -1px;
+    margin-right: 12px;
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: stretch; */
+    align-items: stretch;
+    vertical-align: top;
+    background-color: #fff;
+}
+
+.designer {
+    width: 50%;
+    min-width: 120px;
+    height: calc(100% - 1px);
+    /* min-height: 168px; */
+    margin-top: 12px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.profile-photo {
+    width: 100%;
+
+    margin: -1px 0 0 0;
+}
+
+.profile-photo img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.profile-text {
+    width: calc(100% -2px);
+    padding: 15px 10px;
+    margin-top: -2px;
+    background-color: #fff;
+}
+
+.profile-text p {
+    width: 100%;
+    text-align: left;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.profile-text .name {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+@media (min-width: 576px) {
+    .ex-intro {
+        height: 180px;
+    }
+
+    .ex-intro>p {
+        max-width: 450px;
+    }
+
+    .ex-intro .intro {
+        display: block;
+        right: 50px;
+        transform: translateY(45%);
+    }
+
+    .ex-human {
+        width: 130px;
+        margin-left: 18%;
+    }
+
+    .ex .idea-ph {
+        height: 250px;
+    }
+
+    .ex-bg {
+        height: 240px;
+    }
+}
+
+@media (min-width: 768px) {
+    .ex-intro {
+        height: 180px;
+    }
+
+    .ex-intro .intro {
+        transform: translateY(25%);
+    }
+
+    .ex .idea-border {
+        justify-content: space-between;
+    }
+
+    .ex .idea {
+        width: calc(50% - 20px);
+        margin: 0 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .ex-human {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    .ex-intro .intro {
+        right: 15%;
+        transform: translateY(-10%);
+    }
+
+    .ex .idea-border {
+        width: 80%;
+    }
+
+    .ex .idea {
+        width: calc(50% - 40px);
+        margin: 0 20px;
+    }
+
+    .ex-human {
+        width: 150px;
+        margin-left: 10%;
+    }
+
+    .ex .idea-ph {
+        height: 300px;
+    }
+
+    .ex-bg {
+        height: 280px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .ex-intro {
+        height: 120px;
+    }
+
+    .ex-intro>p {
+        max-width: 600px;
+    }
+
+    .ex-intro .intro {
+        right: 10%;
+        transform: translateY(0);
+    }
+
+    .ex-bg {
+        height: 360px;
+    }
+}
+
+.corp {
+    margin-bottom: 20px;
+}
+
+.corp-border {
+    padding-top: 20px;
+}
+
+.corp-bg {
+    width: 100%;
+    max-width: 1200px;
+    height: 600px;
+    background: url('https://sakulabo.sakura.ad.jp/images/map.gif') center center/ contain no-repeat;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.corp-bg:hover {
+    background: url('https://sakulabo.sakura.ad.jp/images/map-icon.png') 35% 70%/ 5% no-repeat,
+        url('https://sakulabo.sakura.ad.jp/images/map-icon.png') 40% 35%/ 5% no-repeat,
+        url('https://sakulabo.sakura.ad.jp/images/map-icon.png') 20% 55%/ 5% no-repeat,
+        url('https://sakulabo.sakura.ad.jp/images/map-icon.png') 30% 55%/ 5% no-repeat,
+        url('https://sakulabo.sakura.ad.jp/images/map-icon.png') 50% 75%/ 5% no-repeat,
+        url('https://sakulabo.sakura.ad.jp/images/map-icon.png') 80% 85%/ 5% no-repeat,
+        url('https://sakulabo.sakura.ad.jp/images/map-icon.png') 95% 75%/ 5% no-repeat,
+        url('https://sakulabo.sakura.ad.jp/images/map-icon.png') 50% 75%/ 5% no-repeat,
+        url('https://sakulabo.sakura.ad.jp/images/map-icon.png') 70% 35%/ 5% no-repeat,
+        url('https://sakulabo.sakura.ad.jp/images/map-icon.png') 10% 45%/ 5% no-repeat,
+        url('https://sakulabo.sakura.ad.jp/images/map.gif') center center/ contain no-repeat;
+}
+
+.corp-text {
+    width: 60%;
+    margin: 0 auto 40px;
+}
+
+.corp-text p {
+    line-height: 2rem;
+}
+
+.title-pink {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.title-pink>h3 {
+    height: 45px;
+    writing-mode: vertical-lr;
+    line-height: 45px;
+    letter-spacing: unset;
+    /* 要怎麼取消letter spacing?? */
+    text-align: center;
+}
+
+.corp .title-pink {
+    position: absolute;
+    margin-bottom: 10px;
+}
+
+.corp .title-pink>h3 {
+    width: 320px;
+}
+
+@media (min-width: 576px) {
+    .corp-bg {
+        height: 700px;
+        margin-bottom: 30px;
+    }
+
+    .corp-text {
+        width: 70%;
+    }
+}
+
+@media (min-width: 992px) {
+    .corp-bg {
+        height: 900px;
+        margin-bottom: 40px;
+    }
+
+    .corp-text {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .corp-bg {
+        height: 1200px;
+    }
+
+    .corp-text {
+        width: 90%;
+    }
+}
+
+.service {
+    margin: 0 auto 20px;
+    padding: 20px;
+    max-width: 1000px;
+}
+
+.service-bg {
+    border-radius: 15px;
+    background-color: #fff;
+    position: relative;
+    padding: 45px 30px 50px;
+}
+
+.service .title-pink {
+    top: -20px;
+}
+
+.service .title-pink>h3 {
+    width: 280px;
+}
+
+.service-text {
+    width: 85%;
+    margin: 0 auto 30px;
+}
+
+.service-text p {
+    line-height: 2rem;
+}
+
+.service-info {
+    display: grid;
+    margin: 0 auto 30px;
+    max-width: 600px;
+}
+
+.service-info1 {
+    grid-template-columns: 50px auto;
+    /* grid-template-rows: 120px 40px 20px 80px 60px; */
+    grid-template-rows: auto auto auto auto auto auto auto;
+    gap: 10px 10px;
+    grid-template-areas:
+        "service-net service-sakura"
+        "service-net service-ai"
+        "service-future service-ai"
+        "service-future service-iot"
+        "service-future service-satelite";
+    margin-bottom: 30px;
+}
+
+.type {
+    background-color: var(--cellbgc2);
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.type p {
+    writing-mode: horizontal-tb;
+    font-size: 20px;
+}
+
+.service-net {
+    grid-area: service-net;
+}
+
+.service-future {
+    grid-area: service-future;
+}
+
+.list {
+    background-color: var(--cellbgc3);
+    border-radius: 10px;
+    padding: 15px 40px;
+}
+
+.list p {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.list ul {
+    padding-left: 10px;
+}
+
+.list li {
+    list-style-type: disc;
+    list-style-position: inside;
+    font-size: 14px;
+    line-height: 1.5rem;
+}
+
+.service-sakura {
+    grid-area: service-sakura;
+}
+
+.service-ai {
+    grid-area: service-ai;
+}
+
+.service-iot {
+    grid-area: service-iot;
+}
+
+.service-satelite {
+    grid-area: service-satelite;
+}
+
+.service-img {
+    width: 100%;
+    height: 280px;
+    background: url('https://sakulabo.sakura.ad.jp/images/business-image2-sp.png') center center/ contain no-repeat;
+    margin-bottom: 30px;
+}
+
+.service-info2 {
+    grid-template-columns: 50px auto;
+    grid-template-rows: auto;
+    column-gap: 10px;
+    grid-template-areas:
+        "service-archi service-space";
+}
+
+.service-archi {
+    grid-area: service-archi;
+}
+
+.service-space {
+    grid-area: service-space;
+}
+
+@media (min-width: 576px) {}
+
+@media (min-width: 786px) {}
+
+@media (min-width: 992px) {
+    .service-info {
+        max-width: 900px;
+    }
+
+    .service-info {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 50px auto;
+        grid-template-areas:
+            "service-net service-net service-future  service-future"
+            "service-sakura service-ai service-iot service-satelite";
+    }
+
+    .service-info2 {
+        grid-template-columns: 1fr;
+        grid-template-rows: 50 auto;
+        grid-template-areas:
+            "service-archi"
+            "service-space";
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .type {
+        justify-content: center;
+        letter-spacing: 8px;
+        text-indent: 8px;
+    }
+
+    .list {
+        padding: 20px 25px;
+    }
+}
+
+.footer {
+    width: 100%;
+}
+
+.more-info {
+    width: 100%;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.more-btn {
+    width: 360px;
+    height: 72px;
+    background: url('https://sakulabo.sakura.ad.jp/images/town-button.png') center center/ contain no-repeat;
+    border: 2px solid transparent;
+}
+
+.more-btn:hover {
+    background-color: #ddd;
+    box-sizing: border-box;
+    background-image: url('https://sakulabo.sakura.ad.jp/images/town-button.png');
+    background-size: 348px;
+    border-radius: 5px;
+    border: 2px solid #333;
+}
+
+.social-media {
+    width: 100%;
+    /* max-width: 400px; */
+    margin: 0 auto 40px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.media-icon {
+    width: 75px;
+    height: 75px;
+    /* background-color: #ccc; */
+}
+
+.media-icon:hover {
+    border-radius: 7px;
+}
+
+.facebook {
+    background: url('https://sakulabo.sakura.ad.jp/images/sns/facebook.png') center center/cover no-repeat;
+}
+
+.facebook:hover {
+    background: url('https://sakulabo.sakura.ad.jp/images/sns/facebook-hover.png') center center/cover no-repeat;
+}
+
+.twitter {
+    display: none;
+    background: url('https://sakulabo.sakura.ad.jp/images/sns/twitter.png') center center/cover no-repeat;
+}
+
+.twitter:hover {
+    background: url('https://sakulabo.sakura.ad.jp/images/sns/twitter-hover.png') center center/cover no-repeat;
+}
+
+.line {
+    display: none;
+    background: url('https://sakulabo.sakura.ad.jp/images/sns/line.png') center center/cover no-repeat;
+}
+
+.line:hover {
+    background: url('https://sakulabo.sakura.ad.jp/images/sns/line-hover.png') center center/cover no-repeat;
+}
+
+.hatena {
+    display: none;
+    background: url('https://sakulabo.sakura.ad.jp/images/sns/hatena.png') center center/cover no-repeat;
+}
+
+.hatena:hover {
+    background: url('https://sakulabo.sakura.ad.jp/images/sns/hatena-hover.png') center center/cover no-repeat;
+}
+
+.ml-20 {
+    margin-left: 30px;
+}
+
+.link {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ccc;
+}
+
+.link li {
+    width: 50%;
+    height: 50px;
+    line-height: 50px;
+    background-color: #fff;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.link>li:hover>a {
+    color: rgb(117, 117, 117);
+    cursor: pointer;
+}
+
+.link li:nth-child(2n+1) {
+    border-right: 1px solid #ccc;
+}
+
+.copyright {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #fff;
+    text-align: center;
+}
+
+small {
+    font-size: 14px;
+}
+
+@media (min-width: 576px) {
+    .twitter {
+        display: block;
+    }
+
+    .line {
+        display: block;
+    }
+
+    .ml-20 {
+        margin-left: 40px;
+    }
+
+    .link li {
+        width: 33.33333%;
+    }
+
+    .link li:nth-child(2n+1) {
+        border-right: 1px solid transparent;
+    }
+
+    .link li:nth-child(3n+1),
+    .link li:nth-child(3n+2) {
+        border-right: 1px solid #ccc;
+    }
+}
+
+@media (min-width: 768px) {
+    .hatena {
+        display: block;
+    }
+
+    .ml-20 {
+        margin-left: 50px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .link li {
+        width: 16.66666%;
+    }
+
+    .link li:nth-child(3) {
+        border-right: 1px solid #ccc;
+    }
+}
