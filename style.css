@@ -194,10 +194,15 @@ a:hover {
     width: 200px;
     height: 55px;
     background-color: #fff;
-    background-image: url('https://sakulabo.sakura.ad.jp/images/sakura-logo.png');
+    color: #555;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 50px;
+    text-align: center;
+    /* background-image: url('https://sakulabo.sakura.ad.jp/images/sakura-logo.png');
     background-size: 90%;
     background-position: center center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
     position: absolute;
     transform: translate(-10px, -15px);
 }
@@ -205,7 +210,8 @@ a:hover {
 .logoJpn {
     width: 60px;
     height: 320px;
-    background: url('https://sakulabo.sakura.ad.jp/images/header-title.jpg') center center/ cover no-repeat;
+    background: url('/images/logo-jpn.png') center center/ contain no-repeat;
+    /* background: url('https://sakulabo.sakura.ad.jp/images/header-title.jpg') center center/ cover no-repeat; */
     position: absolute;
     z-index: 5;
     right: 0;
@@ -291,13 +297,24 @@ a:hover {
     width: 100%;
     margin: auto;
     margin-top: 280px;
-    height: 100px;
-    /* position:relative;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%); */
-    display: flex;
-    justify-content: space-between;
+    height: 150px;
+    background: url('/images/banner-bg.jpg') center center/ contain repeat;
+    opacity: .7;
+    animation: anibg 10s linear infinite;
+}
+
+@keyframes anibg {
+    0% {
+        background-position-x: 0px;
+    }
+
+    50% {
+        background-position-x: 100%;
+    }
+    
+    100% {
+        background-position-x: 0;
+    }
 }
 
 .ani>img {
@@ -316,7 +333,7 @@ a:hover {
 
 @media (min-width: 576px) {
     .ani {
-        width: 50%;
+        width: 100%;
     }
 
     .nav>img {
@@ -493,15 +510,21 @@ h3 {
 }
 
 .ph1 {
-    background: url('https://sakulabo.sakura.ad.jp/images/sakulabo-thum/image2.png') 15% 20%/ cover no-repeat;
+    /* Image by rawpixel.com on Freepik */
+    background: url('/images/fridge.jpg') 10% 50%/ cover no-repeat;
+    /* background: url('https://sakulabo.sakura.ad.jp/images/sakulabo-thum/image2.png') 15% 20%/ cover no-repeat; */
 }
 
 .ph2 {
-    background: url('https://sakulabo.sakura.ad.jp/images/sakulabo-thum/image3.png') 15% 20%/ cover no-repeat;
+    /* Image by wirestock on Freepik */
+    background: url('/images/hong-kong-night.jpg') 50% 50%/cover no-repeat;
+    /* background: url('https://sakulabo.sakura.ad.jp/images/sakulabo-thum/image3.png') 15% 20%/ cover no-repeat; */
 }
 
 .ph3 {
-    background: url('https://sakulabo.sakura.ad.jp/images/sakulabo-thum/image4.png') 15% 20%/ cover no-repeat;
+    /* Image by Freepik */
+    background: url('/images/cat.jpg') 10% 50%/ cover no-repeat;
+    /* background: url('https://sakulabo.sakura.ad.jp/images/sakulabo-thum/image4.png') 15% 20%/ cover no-repeat; */
 }
 
 .ph4 {
@@ -531,20 +554,25 @@ p {
 
 .btn {
     width: 180px;
-    height: 68px;
+    height: 70px;
     /* padding: 3px; */
-    border: 2px solid transparent;
+    border-radius: 6px;
     margin: 0 auto;
     margin-bottom: 20px;
     box-sizing: border-box;
-    background: url('https://sakulabo.sakura.ad.jp/images/slide-button.png') center center/ cover no-repeat;
+    overflow: hidden;
+    /* background: url('https://sakulabo.sakura.ad.jp/images/slide-button.png') center center/ cover no-repeat; */
 }
 
+.btn img {
+    width: 100%;
+}
 .btn:hover {
+    width: 176px;
+    height: 66px;
     background-color: #ddd;
-    background-image: url('https://sakulabo.sakura.ad.jp/images/slide-button.png');
-    background-size: calc(100% - 14px);
-    /* padding: 2px; */
+    /* background-image: url('https://sakulabo.sakura.ad.jp/images/slide-button.png'); */
+    /* background-size: calc(100% - 14px); */
     border: 2px solid #333;
     border-radius: 5px;
 }
@@ -912,13 +940,14 @@ p {
     width: 100%;
     max-width: 1200px;
     height: 600px;
-    background: url('https://sakulabo.sakura.ad.jp/images/map.gif') center center/ contain no-repeat;
+    background: url('/images/corp.png') center center/ contain no-repeat;
+    /* background: url('https://sakulabo.sakura.ad.jp/images/map.gif') center center/ contain no-repeat; */
     margin: 0 auto;
     margin-bottom: 20px;
 }
 
 .corp-bg:hover {
-    background: url('https://sakulabo.sakura.ad.jp/images/map-icon.png') 35% 70%/ 5% no-repeat,
+    /* background: url('https://sakulabo.sakura.ad.jp/images/map-icon.png') 35% 70%/ 5% no-repeat,
         url('https://sakulabo.sakura.ad.jp/images/map-icon.png') 40% 35%/ 5% no-repeat,
         url('https://sakulabo.sakura.ad.jp/images/map-icon.png') 20% 55%/ 5% no-repeat,
         url('https://sakulabo.sakura.ad.jp/images/map-icon.png') 30% 55%/ 5% no-repeat,
@@ -928,7 +957,7 @@ p {
         url('https://sakulabo.sakura.ad.jp/images/map-icon.png') 50% 75%/ 5% no-repeat,
         url('https://sakulabo.sakura.ad.jp/images/map-icon.png') 70% 35%/ 5% no-repeat,
         url('https://sakulabo.sakura.ad.jp/images/map-icon.png') 10% 45%/ 5% no-repeat,
-        url('https://sakulabo.sakura.ad.jp/images/map.gif') center center/ contain no-repeat;
+        url('https://sakulabo.sakura.ad.jp/images/map.gif') center center/ contain no-repeat; */
 }
 
 .corp-text {
@@ -1182,17 +1211,24 @@ p {
 
 .more-btn {
     width: 360px;
-    height: 72px;
-    background: url('https://sakulabo.sakura.ad.jp/images/town-button.png') center center/ contain no-repeat;
+    height:72px;
+    /* background: url('https://sakulabo.sakura.ad.jp/images/town-button.png') center center/ contain no-repeat; */
     border: 2px solid transparent;
+    padding: 4px;
+}
+
+.more-btn>img {
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
 }
 
 .more-btn:hover {
+    width: calc(360px - 10px);
     background-color: #ddd;
-    box-sizing: border-box;
-    background-image: url('https://sakulabo.sakura.ad.jp/images/town-button.png');
-    background-size: 348px;
-    border-radius: 5px;
+    /* background-image: url('https://sakulabo.sakura.ad.jp/images/town-button.png');
+    background-size: 348px; */
+    border-radius: 8px;
     border: 2px solid #333;
 }
 
@@ -1211,43 +1247,60 @@ p {
     /* background-color: #ccc; */
 }
 
+.media-icon img {
+    width: 100%;
+    object-fit: cover;
+}
+
 .media-icon:hover {
-    border-radius: 7px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.media-icon:hover img {
+    width: calc(100% - 8px);
+
+    /* object-position: 50% 50%; */
+
 }
 
 .facebook {
-    background: url('https://sakulabo.sakura.ad.jp/images/sns/facebook.png') center center/cover no-repeat;
+    /* background: url('https://sakulabo.sakura.ad.jp/images/sns/facebook.png') center center/cover no-repeat; */
 }
 
 .facebook:hover {
-    background: url('https://sakulabo.sakura.ad.jp/images/sns/facebook-hover.png') center center/cover no-repeat;
+    /* background: url('https://sakulabo.sakura.ad.jp/images/sns/facebook-hover.png') center center/cover no-repeat; */
 }
 
 .twitter {
-    display: none;
-    background: url('https://sakulabo.sakura.ad.jp/images/sns/twitter.png') center center/cover no-repeat;
+    /* display: none;
+    background: url('https://sakulabo.sakura.ad.jp/images/sns/twitter.png') center center/cover no-repeat; */
 }
 
 .twitter:hover {
-    background: url('https://sakulabo.sakura.ad.jp/images/sns/twitter-hover.png') center center/cover no-repeat;
+    /* background: url('https://sakulabo.sakura.ad.jp/images/sns/twitter-hover.png') center center/cover no-repeat; */
 }
 
 .line {
-    display: none;
-    background: url('https://sakulabo.sakura.ad.jp/images/sns/line.png') center center/cover no-repeat;
+    /* display: none;
+    background: url('https://sakulabo.sakura.ad.jp/images/sns/line.png') center center/cover no-repeat; */
 }
 
 .line:hover {
-    background: url('https://sakulabo.sakura.ad.jp/images/sns/line-hover.png') center center/cover no-repeat;
+    /* background: url('https://sakulabo.sakura.ad.jp/images/sns/line-hover.png') center center/cover no-repeat; */
 }
 
 .hatena {
-    display: none;
-    background: url('https://sakulabo.sakura.ad.jp/images/sns/hatena.png') center center/cover no-repeat;
+    /* display: none;
+    background: url('https://sakulabo.sakura.ad.jp/images/sns/hatena.png') center center/cover no-repeat; */
 }
 
 .hatena:hover {
-    background: url('https://sakulabo.sakura.ad.jp/images/sns/hatena-hover.png') center center/cover no-repeat;
+    /* background: url('https://sakulabo.sakura.ad.jp/images/sns/hatena-hover.png') center center/cover no-repeat; */
 }
 
 .ml-20 {
