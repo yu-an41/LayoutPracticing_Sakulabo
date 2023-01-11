@@ -211,7 +211,7 @@ a:hover {
 .logoJpn {
     width: 60px;
     height: 320px;
-    background: url('/images/logo-jpn.png') center center/ contain no-repeat;
+    background: url('./images/logo-jpn.png') center center/ contain no-repeat;
     /* background: url('https://sakulabo.sakura.ad.jp/images/header-title.jpg') center center/ cover no-repeat; */
     position: absolute;
     z-index: 5;
@@ -286,7 +286,7 @@ a:hover {
 
 .banner-bg {
     width: 100%;
-    max-width: 1080px;
+    /* max-width: 1080px; */
     height: 100%;
     position: relative;
     overflow: hidden;
@@ -296,10 +296,9 @@ a:hover {
 
 .ani {
     width: 100%;
-    margin: auto;
-    margin-top: 280px;
+    margin: 280px auto 0;
     height: 150px;
-    background: url('/images/banner-bg.jpg') center center/ contain repeat;
+    background: url('./images/banner-bg.jpg') center center/ contain repeat;
     opacity: .7;
     animation: anibg 10s linear infinite;
 }
@@ -386,6 +385,7 @@ a:hover {
     writing-mode: vertical-rl;
     text-align: center;
     letter-spacing: 2px;
+    transition: 1s;
 }
 
 h3 {
@@ -513,19 +513,19 @@ h3 {
 
 .ph1 {
     /* Image by rawpixel.com on Freepik */
-    background: url('/images/fridge.jpg') 10% 50%/ cover no-repeat;
+    background: url('./images/fridge.jpg') 10% 50%/ cover no-repeat;
     /* background: url('https://sakulabo.sakura.ad.jp/images/sakulabo-thum/image2.png') 15% 20%/ cover no-repeat; */
 }
 
 .ph2 {
     /* Image by wirestock on Freepik */
-    background: url('/images/hong-kong-night.jpg') 50% 50%/cover no-repeat;
+    background: url('./images/hong-kong-night.jpg') 50% 50%/cover no-repeat;
     /* background: url('https://sakulabo.sakura.ad.jp/images/sakulabo-thum/image3.png') 15% 20%/ cover no-repeat; */
 }
 
 .ph3 {
     /* Image by Freepik */
-    background: url('/images/cat.jpg') 10% 50%/ cover no-repeat;
+    background: url('./images/cat.jpg') 10% 50%/ cover no-repeat;
     /* background: url('https://sakulabo.sakura.ad.jp/images/sakulabo-thum/image4.png') 15% 20%/ cover no-repeat; */
 }
 
@@ -713,7 +713,20 @@ p {
     top: 50%;
     transform: translateY(-25%);
     background: linear-gradient(to top left, #ff008080, #40e0d070 30%, #ff8c0070 60%, #ff008080 70%, #40e0d070 90%, #ff8c0070 100%);
+    background-repeat: repeat;
+    animation: exbg 5s linear infinite;
     background-size: 20px 20px, 20px 20px;
+}
+@keyframes exbg {
+    0% {
+        transform: translateX(0%);
+    }
+    50% {
+        transform: translateX(50%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
 }
 
 .ex .idea-border {
@@ -744,12 +757,15 @@ p {
 }
 
 .ex .idea-ph {
-    background: url('https://sakulabo.sakura.ad.jp/images/achieve-thum/01.jpg')15% 20%/ cover no-repeat;
+    /* background: url('https://sakulabo.sakura.ad.jp/images/achieve-thum/01.jpg')15% 20%/ cover no-repeat; */
+    background: url('./images/hong-kong-night.jpg') center center/ cover no-repeat;
     margin-bottom: 0;
 }
 
 .idea2 .idea-ph {
-    background: url('https://www.sakura.ad.jp/csr/employee/images/pic.png')15% 20%/ cover no-repeat;
+    /* background: url('https://www.sakura.ad.jp/csr/employee/images/pic.png')15% 20%/ cover no-repeat; */
+    background: url('./images/office.jpg') center 60%/ cover no-repeat;
+    /* Image by pressfoto on Freepik */
 }
 
 .ex .idea-title {
@@ -942,7 +958,7 @@ p {
     width: 100%;
     max-width: 1200px;
     height: 600px;
-    background: url('/images/corp.png') center center/ contain no-repeat;
+    background: url('./images/corp.png') center center/ contain no-repeat;
     /* background: url('https://sakulabo.sakura.ad.jp/images/map.gif') center center/ contain no-repeat; */
     margin: 0 auto;
     margin-bottom: 20px;
